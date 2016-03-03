@@ -18,9 +18,10 @@ let getUsers = function () {
 };
 
 
-let displayRatings = function(response) {
+let displayUsers = function(response) {
   let users = response.users;
-  let ratingListing = require('./users.handlebars');
+  let userListing = require('./users.handlebars');
+  $('.user-listing').prepend(userListing({
     users
-  });
+  }));
 };
