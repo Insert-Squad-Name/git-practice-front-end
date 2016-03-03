@@ -4,6 +4,10 @@ const myApp = {
   BASE_URL: 'http://jsonplaceholder.typicode.com/',
 };
 
+$('.button').on('click', function(e) {
+  e.preventDefault();
+  getUsers();
+});
 
 let getUsers = function () {
   $.ajax({
